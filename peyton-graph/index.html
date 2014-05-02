@@ -1,0 +1,196 @@
+<html>
+    <head>
+        <title>Peyton Manning Passing Graph</title>
+        <link rel="stylesheet" type="text/css" href="lib/css/jquery-ui.css" />
+        <link rel="stylesheet" type="text/css" href="lib/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="lib/css/dfmtable.css" />
+    </head>
+
+    <body>
+        <div id="dfm-container">
+        
+        <div id="leftCol">
+            <img id="art" src="lib/img/trio.jpg" alt="" />
+            <div class="pie-chart-container">
+            
+                <h3>Getting some help</h3>
+                <p class="desc">The Broncos' up-tempo offense relies on shorter passes that set up receivers for yards after the catch. Under Manning, that strategy proved record-breaking.</p>
+
+                <img src="lib/img/help-pie.gif" alt="" />
+
+            <table id="stats-table" class="dfmtable">
+                <thead>
+                    <tr>
+                        <th>Receiver</th><th>Total air yds.</th><th>Yards after catch</th><th>TDs</th>
+                    </tr>
+                </thead>
+                <tbody class="stats-table-rows">
+                </tbody>
+            </table>
+
+            <p>&nbsp;</p>
+            <h3>A matter of inches</h3>
+            <p class="desc">Manning broke Drew Brees' record for passing yards in a season during the first half of the Broncos' regular-season finale against the Raiders. With the record in hand, Manning rested on the bench during the second half.</p>
+            <img src="lib/img/passing-pies.gif" alt="" />
+            <table class="dfmtable">
+            <tr>
+                <th align="right">Manning 2013</th>
+                <th align="center" class="dfmtablec">&nbsp;</th>
+                <th>Brees 2011</th>
+            </tr>
+            <tr>
+                <td class="dfmtabler">5,477</td>
+                <td class="dfmtablec">Total passing yards</td>
+                <td>5476</td>
+            </tr>
+            <tr>
+                <td class="dfmtabler">2,948</td>
+                <td class="dfmtablec">Yards through air</td>
+                <td>2965</td>
+            </tr>
+            <tr>
+                <td class="dfmtabler">2,529</td>
+                <td class="dfmtablec">Yards after catch</td>
+                <td>2511</td>
+            </tr>
+            <tr>
+                <td class="dfmtabler">115.1</td>
+                <td class="dfmtablec">QB rating</td>
+                <td>110.6</td>
+            </tr>
+            <tr>
+                <td class="dfmtabler">1,156</td>
+                <td class="dfmtablec">Total offense plays *</td>
+                <td>1,117</td>
+            </tr>
+            <tr>
+                <td class="dfmtabler">37</td>
+                <td class="dfmtablec">Age</td>
+                <td>32</td>
+            </tr>
+        </table>
+        </div>
+
+        </div> <!-- END LEFT COL DIV -->
+
+        <div id="rightCol">
+            <div id="bars-container">
+                <h3>Touchdown record</h3>
+                <p class="desc">Breaking Brady's record of 50 touchdowns in a year was a reclamation project of sorts. Manning owned the record for three years after throwing for 49 TDs in 2004.</p>
+
+                <div class="dfmtablecon">
+        
+                    <table class="dfmtable">
+                        <tr>
+                            <th align="right">Manning 2013</th>
+                            <th align="center" class="dfmtablec">&nbsp;</th>
+                            <th>Brady 2007</th>
+                        </tr>
+                        <tr>
+                            <td class="dfmtabler">55</td>
+                            <td class="dfmtablec">Passing TDs</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td class="dfmtabler">659</td>
+                            <td class="dfmtablec">Pass attempts</td>
+                            <td>578</td>
+                        </tr>
+                        <tr>
+                            <td class="dfmtabler">450</td>
+                            <td class="dfmtablec">Pass completions</td>
+                            <td>398</td>
+                        </tr>
+                        <tr>
+                            <td class="dfmtabler">115.1</td>
+                            <td class="dfmtablec">QB rating</td>
+                            <td>117.2</td>
+                        </tr>
+                        <tr>
+                            <td class="dfmtabler">1,156</td>
+                            <td class="dfmtablec">Total offense plays *</td>
+                            <td>1,058</td>
+                        </tr>
+                        <tr>
+                            <td class="dfmtabler">37</td>
+                            <td class="dfmtablec">Age</td>
+                            <td>30</td>
+                        </tr>
+                    </table>
+
+                </div>
+
+                <h3>Touchdown breakdown</h3>
+                <p class="desc">Manning's been deadly from anywhere on the field. Here's a look at each of his 55 touchdown passes this season.</p>
+
+                <div>
+                    <div class="keysq" style="background-color: #e08900;"></div><div class="keytext">Yards in air</div>
+                    <div class="keysq" style="background-color: #f9b446;"></div><div class="keytext">Yards after catch</div>
+                </div>
+
+                <div style="clear:both; margin-bottom: 15px"></div>
+                
+                <div id="dfm-graph-container"></div>
+                <div id="scale"><img src="lib/img/scale.gif" /></div>
+
+            </div>
+
+        </div> <!-- END RIGHT COL DIV -->
+
+    </div> <!-- END DFM CONTAINER -->
+
+    <div style="clear:both"></div>
+
+    <div class="credits-con">
+            * Total number of offensive plays<br />
+             Sources: Stats Inc., Denver Broncos<br /> 
+             Credits: Gary Kicinski, Vaughn Hagerty, Nelson Hsu, Matt Walks / DFM
+     </div>
+       
+        
+        <script id="dfm-bar-graph-template" type="text/x-handlebars-template">
+        <div class="dfm-graph-row">
+            <div class="dfm-graph-text dfm-graph-element">
+            {{game_number}}
+            </div>
+            <div class="dfm-graph-bar dfm-graph-element" data-url="{{url}}">
+                <div class="dfm-graph-bar-pass dfm-graph-element" style="width:{{pass_yards}}%" title="{{pass_yards}} yards in the air to {{receiver}}"></div>
+                <div class="dfm-graph-bar-run dfm-graph-element" style="width:{{run_yards}}%" title="{{receiver}} ran for {{run_yards}} yards"></div>
+            </div>
+        </div>
+        </script>
+
+        
+
+    </body>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://data.digitalfirstmedia.com/lib/js/handlebars-1.0.rc.1.js"></script>
+    <script type="text/javascript" src="lib/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="lib/js/peyton-graph.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+    </script>
+
+    <script type="text/javascript" src="https://spreadsheets.google.com/feeds/list/0AmZLmP_PGBQKdHlzNExOSG5xcFFDSUJaUy1NT0xRSmc/od6/public/values?alt=json-in-script&callback=load_gs_content">
+    </script>
+
+    <script>
+        $( ".dfm-graph-text:contains('GM')" ).css( { "border-top": "1px solid #e5e5e5"} );
+    </script>
+
+    <!--GOOGLE ANALYTICS-->
+    <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-37303540-1']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+     </script>
+
+</html>

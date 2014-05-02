@@ -1,0 +1,40 @@
+#dfm-container { width: 640px; }
+#bars-container { width: 300px; margin:0;padding:0; font-family: Arial; display: inline; float: left }
+.dfm-graph-row { width: 100%; height: 15px; padding 3px 0; margin: 3px 0;  }
+.dfm-graph-element { display:inline; float: left; padding: 0; margin: 0; }
+.dfm-graph-text { padding: 2px 3px 0 0; margin: 0 3px 0 0 ; font-size: 9pt; width: 40px; height: 100%; color: #333; text-align: right; }
+.dfm-graph-bar { width: 250px; height: 100%; }
+.dfm-graph-bar-run { background-color: #f9b446; padding: 0; margin: 0; height: 100%}
+.dfm-graph-bar-pass { background-color: #e08900; padding: 0; margin: 0; height: 100%}
+.dfm-pie-chart { width: 200px; height: 200px; }
+.pie-chart-container { width: 310px; }
+
+.ui-widget {
+    font: 10pt Arial;
+
+}
+
+#dfm-graph-container {
+	background: url('../img/lines-bg.gif') repeat-y 46;
+}
+
+#scale { position: relative; left: 46px;}
+
+.keysq { width: 13px; height: 13px; margin-right: 5px; float: left; }
+.keytext { font: 12px Arial; color: #333; float: left; margin-right: 20px }
+
+.piechart-title,.table-title { font: 12px Arial; color: #333; width: 100%; margin-bottom: 10px; }
+
+.table-title { margin-top: 30px; }
+
+table#stats-table th { text-align: left; }
+
+#leftCol { width: 310px; float: left; }
+#rightCol { width: 310px; float: right; margin-left: 20px; }
+
+h3 { font: bold 16px Arial; margin-bottom: 0px; }
+.desc { font: 14px Arial; margin-top: 5px; }
+
+#art { margin-bottom: 10px; }
+
+.credits-con { font: italic 11px Arial; color: #999; clear:both;} 

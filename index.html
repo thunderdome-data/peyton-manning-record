@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>PMP</title>
+	
+	<link href='http://fonts.googleapis.com/css?family=Alegreya' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="lib/css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+		
+</head>
+
+<body>
+	
+	<div id="content">
+		<h1>Peyton Manning Touchdown and Passing Tracker</h1>
+		<div id="qa">
+			<h2 class="question">Has Peyton Manning broken any records?</h2>
+			<h2 class="answer"></h2>
+		</div>
+		<p id="rundown"></p>
+		<div id="stats">
+			<div class="stat-box">
+				<div class="label">Games Remaining<span class="dfm-asterisk"></span>:</div><div class="stat-number" id="games-remaining"></div>
+			</div>
+			<div class="stat-box">
+				<div class="label">Projected Touchdowns<span class="dfm-asterisk"></span>:</div><div class="stat-number" id="tds-projected"></div>
+			</div>
+			<div class="stat-box">
+				<div class="label">Projected Passing Yards<span class="dfm-asterisk"></span>:</div><div class="stat-number" id="yds-projected"></div>
+			</div>
+		</div>
+
+		<div class="bar-box">
+			<h3 class="bar-label">Passing touchdowns</h3>
+            <div id="popover" class="popover">
+                <div class="popover-box">
+                    <div class="popover-label"></div>
+                    <div class="popover-number"></div>
+                </div>
+                <div class="arrow-down"></div>
+            </div>
+            
+			<div class="bar" id="tds">
+				<div class="progress"><div class="indicator"><div class="current-number" id="current-tds"><span>TDS</span></div></div></div>
+				<div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+				<div class="record-box">
+					<div class="record-label">Record:</div>
+					<div class="record-number" id="tds-record">50<span>TDS</span></div>
+				</div>
+			</div>
+        </div>
+        <div id="instruct">Roll over dots for details</div>
+		<div class="bar-box">
+			
+			<h3 class="bar-label">Passing yards</h3>
+			<div class="bar" id="yds">
+				<div class="progress"><div class="indicator"><div class="current-number" id="current-yards"><span>YDS</span></div></div></div>
+				<div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+				<div class="record-box">
+					<div class="record-label">Record:</div>
+					<div class="record-number" id="yards-record">5,476<span>YDS</span></div>
+				</div>
+			</div>
+		</div>
+        <div class="credits-con">
+        <span id="dfm-note"></span> Credits: Daniel Fuentes, Vaughn Hagerty / DFM
+        </div>
+
+	</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<script type="text/javascript" src="lib/js/peyton.js">
+</script>
+<script type="text/javascript" src="lib/js/brees-brady.js">
+</script>
+<script type="text/javascript" src="https://spreadsheets.google.com/feeds/list/0AmZLmP_PGBQKdFlsNmphUHNPUkkzWGVSN3RvUFdKdFE/od6/public/values?alt=json-in-script&callback=load_gs_content">
+</script>
+
+<!--analytics-->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37303540-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>

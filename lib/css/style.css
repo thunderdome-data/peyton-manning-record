@@ -1,0 +1,185 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: arial, sans-serif;
+    color: #333;
+}
+
+h1 { font-size: 25px; }
+#content{
+	margin: 0;
+	width: 628px;
+    padding-left: 12px;
+}
+
+#qa{display: none}
+
+#qa .question{
+	font-family: 'Alegreya', serif;
+	font-weight: 100;
+	font-size: 40px;
+	line-height: 40px;
+	margin: 0;
+}
+#qa .answer{
+	text-transform: uppercase;
+	font-size: 100px;
+	line-height: 100px;
+	margin: 0;
+}
+.stat-box{
+	display: table;
+	margin-bottom: 5px;
+}
+.stat-box div{
+    display: inline-block;
+    font-size: 16px;
+}
+.stat-box .label{
+	font-weight: bold;
+	width: 288px;
+}
+#rundown{
+    font-size: 15px;
+}
+.bar-box{
+	position: relative;
+	margin: 55px 0 0;
+}
+.bar-box .popover{
+	position: absolute;
+	top: -24px;
+	left: 213px;
+	width: 85px;
+	color: #fff;
+	text-align: center;
+	z-index: 5;
+}
+.bar-box .popover .arrow-down {
+	width: 0; 
+	height: 0; 
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 10px solid #444;
+	margin: 0 auto;
+}
+.bar-box .popover .popover-box{
+	padding: 10px 5px 7px;
+	background-color: #444;
+}
+.bar-box .popover .popover-box .popover-label{
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #bababa;
+}
+.bar-box .bar-label{
+	text-transform: uppercase;
+	font-weight: normal;
+	margin: 0;
+}
+.bar-box .bar{
+	position: relative;
+	padding: 0 10px;
+	width: 600px;
+	border: 1px solid #333;
+}
+.bar-box .bar .progress{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 518px;
+	height: 56px;
+	background-color: #f1f1f1;
+}
+.bar-box .bar .progress.wk11{
+	width: 316px;
+}
+
+.bar-box .bar .progress.wk12{
+	width: 346px;
+}
+
+.bar-box .bar .progress.wk13{
+	width: 375px;
+}
+
+.bar-box .bar .progress.wk14{
+	width: 404px;
+}
+
+.bar-box .bar .progress.wk15{
+	width: 433px;
+}
+
+.bar-box .bar .progress.wk16{
+	width: 462px;
+}
+
+.bar-box .bar .progress.wk17{
+	width: 492px;
+}
+
+.bar-box .bar .progress .indicator{
+	position: absolute;
+	top: -14px;
+	right: 0;
+	border-right: 1px solid #333;
+	height: 84px;
+}
+.bar-box .bar .progress .indicator .current-number{
+	position: absolute;
+	top: -25px;
+	right: -57px;
+	text-align: center;
+	width: 114px;
+	color: #666;
+}
+
+.bar-box .bar .record-box{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 11px 0 0 11px;
+    width: 92px;
+    height: 45px;
+    color: #fff;
+    font-size: 15px;
+    background-color: #444;
+}
+
+.bar-box .bar .record-box .record-number,
+.bar-box .bar .progress .indicator .current-number,
+.bar-box .popover .popover-box .popover-number{
+    font-size: 17px;
+    font-weight: bold;
+}
+.bar-box .bar .record-box .record-number span,
+.bar-box .bar .progress .indicator .current-number span,
+.bar-box .popover .popover-box .popover-number span{
+    display: inline-block;
+    font-weight: normal;
+    margin: 0 0 0 5px;
+}
+.bar-box .dot{
+	display: inline-block;
+	position: relative;
+	width: 10px;
+	height: 10px;
+	background-color: #fff;
+	border: 1px solid #999;
+	border-radius: 6px;
+	margin: 22px 8.6px;
+	padding: 0;
+	z-index: 3;
+}
+.bar-box .dot.past{
+	background-color: #5389c6;
+	border: 1px solid #5389c6;
+}
+.bar-box .dot.bye{
+	background-color: #b8b8b8;
+	border: 1px solid #b8b8b8;
+}
+
+#instruct { margin-top: 20px; margin-bottom: -25px; font: italic 12px Arial; color: #999;}
+.credits-con { font: italic 11px Arial; color: #999; margin-top: 15px} 
