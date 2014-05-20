@@ -4,13 +4,16 @@ peyton-manning-record and peyton-manning-graph
 What is this?
 -------------
 
-App to show Peyton Manning's progress toward various records and a collection of graphs detailing his accomplishments after the fact
+App to show Peyton Manning's progress during the 2013-2014 season toward various records and a collection of graphs detailing his accomplishments after the fact.
 
+Live demo: http://www.denverpost.com/broncos/ci_24589355/how-many-touchdowns-has-peyton-manning-thrown-2013
+
+![Peyton Manning record tracker](screenshots/pmp.png)
 
 Credits
 ---------
 
-Vaughn Hagerty, Nelson Hsu
+Vaughn Hagerty, Nelson Hsu, Daniel Fuentes
 
 Assumptions
 -----------
